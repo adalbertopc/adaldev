@@ -1,24 +1,9 @@
 import { NavigationItem } from './NavigationItem';
-
-const navigationItems = [
-  {
-    text: 'Home',
-    url: '/',
-  },
-  {
-    text: 'Blog',
-    url: '/blog',
-  },
-  {
-    text: 'Portfolio',
-    url: '/portfolio',
-  },
-];
-
+import { navigationItems } from '../constants/navigationItems';
 export const NavigationBar = () => {
   return (
-    <nav>
-      <ul>
+    <nav className="hidden md:block">
+      <ul className="flex justify-between items-center gap-5">
         {navigationItems.map((navigationItem) => (
           <NavigationItem
             key={navigationItem.text}
