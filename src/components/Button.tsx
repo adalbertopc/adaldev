@@ -18,9 +18,9 @@ export const Button = ({
   color = 'text-white',
   bgColor = 'bg-blue-700',
   bgColorHover = 'bg-blue-600',
-  extraClasses,
+  extraClasses = '',
 }: ButtonProps) => {
-  const styles = `text- inline-block px-4 py-2 transition-colors ${bgColor} hover:${bgColorHover} ${color} rounded-md ${extraClasses}`;
+  const styles = `inline-block px-4 py-2 transition-colors ${bgColor} hover:${bgColorHover} ${color} rounded-md ${extraClasses}`;
   return href ? (
     isNextLink ? (
       <Link href={href}>
