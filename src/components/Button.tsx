@@ -1,14 +1,38 @@
+import Link from 'next/link';
 interface ButtonProps {
-  type: 'button' | 'submit' | 'reset' | undefined;
+  type?: 'button' | 'submit' | 'reset' | undefined;
   text: string;
-  outlined?: boolean;
   href?: string;
+  isNextLink?: boolean;
+  color?: string;
+  bgColor?: string;
+  bgColorHover?: string;
+  extraClasses?: string;
 }
 
-export const Button = ({ type, text, outlined, href }: ButtonProps) => {
-  const styles = ``;
+export const Button = ({
+  type,
+  text,
+  href,
+  isNextLink,
+  color = 'text-white',
+  bgColor = 'bg-blue-700',
+  bgColorHover = 'bg-blue-600',
+  extraClasses,
+}: ButtonProps) => {
+  const styles = `text- inline-block px-4 py-2 transition-colors ${bgColor} hover:${bgColorHover} ${color} rounded-md ${extraClasses}`;
   return href ? (
-    <a href={href}>{text}</a>
+    isNextLink ? (
+      <Link href={href}>
+        <a href={href} className={styles}>
+          {text}
+        </a>
+      </Link>
+    ) : (
+      <a href={href} className={styles}>
+        {text}
+      </a>
+    )
   ) : (
     <button type={type} className={styles}>
       {text}
