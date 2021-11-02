@@ -4,7 +4,7 @@ import { NavigationMobile } from './NavigationMobile';
 
 export const Header = () => {
   return (
-    <header className="mt-4 flex justify-between items-center">
+    <header className="z-10 mt-4 flex justify-between items-center">
       <div className="flex items-center gap-5">
         <div className="flex items-center gap-3">
           <div className="bg-gray-500 w-8 h-8 rounded-md"></div>
