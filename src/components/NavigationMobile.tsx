@@ -1,15 +1,15 @@
-import { NavigationItem } from './NavigationItem';
-import { navigationItems } from '../constants/navigationItems';
 import { useState } from 'react';
 import { MenuAlt1Icon } from '@heroicons/react/solid';
+import { NavigationItem } from './NavigationItem';
+import { navigationItems } from '../constants/navigationItems';
 
 export const NavigationMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <button className="w-8 h-8" onClick={handleToggle}>
+    <div className="block md:hidden">
+      <button className="w-8 h-8 block md:hidden" onClick={handleToggle}>
         <MenuAlt1Icon className="" />
       </button>
       <nav
