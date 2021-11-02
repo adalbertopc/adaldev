@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         headings: ['Nunito', 'sans-serif'],
       },
+      borderRadius: {
+        large: '75px',
+      },
     },
   },
   variants: {},
