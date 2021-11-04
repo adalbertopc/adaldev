@@ -8,12 +8,12 @@ export const NavigationMobile = () => {
   const handleToggle = () => setIsOpen(!isOpen);
 
   return (
-    <div className="block md:hidden">
-      <button className="w-8 h-8 block md:hidden" onClick={handleToggle}>
+    <div className="z-10 block lg:hidden">
+      <button className="w-8 h-8 block lg:hidden" onClick={handleToggle}>
         <MenuAlt1Icon className="" />
       </button>
       <nav
-        className={`${isOpen ? 'block' : 'hidden'} md:hidden
+        className={`${isOpen ? 'block' : 'hidden'} lg:hidden
       absolute container p-4 left-0 w-full bg-white shadow-lg z-50
       `}>
         <ul className="flex justify-between items-center gap-5">
