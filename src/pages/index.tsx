@@ -19,7 +19,7 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <div className="container max-w-6xl mx-auto px-4">
+      <div className="container max-w-6xl mx-auto px-4 md:px-6">
         <Header />
         <Hero />
       </div>
