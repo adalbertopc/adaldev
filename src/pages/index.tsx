@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import { apolloClient } from '../apolloClient';
 import { Hero } from '../components/Hero';
 import { Layout } from '../components/Layout';
@@ -21,7 +21,7 @@ export default function Home({ projects }: HomeProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async (ctx) => {
   const { data } = await apolloClient.query({
     query: getAllProjects,
   });
