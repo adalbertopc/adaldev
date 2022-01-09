@@ -8,7 +8,7 @@ interface ProjectsProps {
 export const Projects = ({ projects }: ProjectsProps) => {
   return (
     <section className="my-12 md:my-20">
-      <h2 className="font-headings font-bold text-center text-2xl md:text-3xl md:text-left mb-6">
+      <h2 className="mb-6 text-2xl font-bold text-center font-headings md:text-3xl md:text-left">
         Featured Projects
       </h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

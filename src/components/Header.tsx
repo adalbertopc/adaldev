@@ -4,11 +4,11 @@ import { NavigationMobile } from './NavigationMobile';
 
 export const Header = () => {
   return (
-    <header className="z-10 mt-4 mb-12 flex justify-between items-center">
+    <header className="z-10 flex items-center justify-between mt-4 mb-12">
       <div className="flex items-center gap-5">
         <div className="flex items-center gap-3">
-          <div className="bg-gray-500 w-8 h-8 rounded-md"></div>
-          <h1 className="font-headings font-bold text-lg">
+          <div className="w-8 h-8 bg-gray-500 rounded-md"></div>
+          <h1 className="text-lg font-bold font-headings">
             <Link href="/">
               <a>adal.dev</a>
             </Link>

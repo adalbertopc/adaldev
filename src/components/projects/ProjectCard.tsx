@@ -16,7 +16,7 @@ export const ProjectCard = ({
   }${image[0].url}`;
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <article className="rounded-3xl shadow-md p-4 relative transition-all transform hover:scale-105">
+    <article className="relative p-4 transition-all transform shadow-md rounded-3xl hover:scale-105">
       <div className="relative aspect-w-16 aspect-h-9 rounded-2xl">
         <Image
           src={imageUrl}
@@ -28,14 +28,14 @@ export const ProjectCard = ({
         />
       </div>
       <div>
-        <h2 className="my-3 font-headings font-bold text-lg">{title}</h2>
+        <h2 className="my-3 text-lg font-bold font-headings">{title}</h2>
         <p className={`${!isOpen && 'line-clamp-3'} text-sm`}>{description}</p>
         <button
-          className="font-semibold text-sm"
+          className="text-sm font-semibold"
           onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? 'Read Less' : 'Read More'}
         </button>
-        <div className="mt-4 flex gap-2">
+        <div className="flex gap-2 mt-4">
           <Button>
             <EyeIcon className="w-4 h-4" />
           </Button>
