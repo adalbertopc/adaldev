@@ -13,13 +13,14 @@ interface HomeProps {
 
 export default function Home({ projects }: HomeProps) {
   return (
-    <div>
+    <div className="relative overflow-x-hidden">
       <Layout>
         <Hero />
         <ImageWithText
           title="Hola Mundo"
           text="Lorem kdmsdkalmdsldmalk"
           background="bg-red-200"
+          image="/assets/img/casual-life-3d-14.png"
         />
         <Projects projects={projects} />
       </Layout>
