@@ -19,21 +19,21 @@ export const Hero = () => {
             </p>
           </div>
           <div className="mb-6 flex gap-4 justify-center md:justify-start">
-            <Button text="View Projects" href="#projects" />
+            <Button href="#projects">View Projects</Button>
             <Button
-              text="Read Blog"
               href="#blog"
               color="text-blue-700"
               bgColor="bg-white"
               bgColorHover=""
-              extraClasses="border-2 border-blue-700"
-            />
+              extraClasses="border-2 border-blue-700">
+              Read Blog
+            </Button>
           </div>
         </div>
         <div className="flex justify-center">
           <div className="transition-all mt-4 md:mt-0 w-56 h-56 xs:w-80 xs:h-80 md:w-auto md:h-auto relative">
             <Image
-              src="/assets/img/casual-life-3d-14.png"
+              src="/assets/img/adal_macbook.png"
               layout="fill"
               alt="Adalberto Prado"
               objectFit="contain"
