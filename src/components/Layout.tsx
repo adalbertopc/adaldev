@@ -18,10 +18,9 @@ export const Layout = ({ children }) => {
           rel="stylesheet"
         />
       </Head>
-      <div className="container max-w-6xl px-4 mx-auto md:px-6">
-        <Header />
-        {children}
-      </div>
+
+      <Header />
+      {children}
     </>
   );
 };

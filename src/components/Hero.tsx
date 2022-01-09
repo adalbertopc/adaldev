@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import { InnerLayout } from '../components/InnerLayout';
 import { Button } from './Button';
 
 export const Hero = () => {
   return (
-    <>
+    <InnerLayout>
       <span className="absolute top-0 right-0 z-0 flex flex-col items-end mt-0 pointer-events-none">
-        <span className="container hidden w-screen max-w-sm bg-blue-100 rounded-r-none rounded-tl-none transition-all transform h-96 rounded-bl-large md:block md:max-w-sm lg:max-w-lg xl:max-w-2xl opacity-70"></span>
+        <span className="container hidden w-screen max-w-sm transition-all transform bg-blue-100 rounded-r-none rounded-tl-none h-96 rounded-bl-large md:block md:max-w-sm lg:max-w-lg xl:max-w-2xl opacity-70"></span>
       </span>
       <section className="z-10 grid md:grid-cols-2">
         <div className="text-center md:text-left">
@@ -18,7 +19,7 @@ export const Hero = () => {
               applications.
             </p>
           </div>
-          <div className="flex justify-center mb-6 gap-4 md:justify-start">
+          <div className="flex justify-center gap-4 mb-6 md:justify-start">
             <Button href="#projects">View Projects</Button>
             <Button
               href="#blog"
@@ -41,6 +42,6 @@ export const Hero = () => {
           </div>
         </div>
       </section>
-    </>
+    </InnerLayout>
   );
 };
