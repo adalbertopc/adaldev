@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   purge: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
@@ -20,6 +21,6 @@ module.exports = {
   variants: {},
   plugins: [
     require('@tailwindcss/aspect-ratio'),
-    // ...
+    require('@tailwindcss/line-clamp'),
   ],
 };
