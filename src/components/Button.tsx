@@ -1,7 +1,7 @@
 import Link from 'next/link';
 interface ButtonProps {
+  children: any;
   type?: 'button' | 'submit' | 'reset' | undefined;
-  text: string;
   href?: string;
   isNextLink?: boolean;
   color?: string;
@@ -11,8 +11,8 @@ interface ButtonProps {
 }
 
 export const Button = ({
+  children,
   type,
-  text,
   href,
   isNextLink,
   color = 'text-white',
@@ -25,17 +25,17 @@ export const Button = ({
     isNextLink ? (
       <Link href={href}>
         <a href={href} className={styles}>
-          {text}
+          {children}
         </a>
       </Link>
     ) : (
       <a href={href} className={styles}>
-        {text}
+        {children}
       </a>
     )
   ) : (
     <button type={type} className={styles}>
-      {text}
+      {children}
     </button>
   );
 };
