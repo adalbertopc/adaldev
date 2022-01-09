@@ -4,9 +4,9 @@ import { Button } from './Button';
 
 export const Hero = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="pb-10 overflow-x-hidden">
       <div className="absolute top-0 z-0 flex flex-col items-end w-full h-full mt-0 pointer-events-none left-1/2">
-        <div className="hidden w-full transition-all transform bg-blue-100 rounded-r-none rounded-tl-none h-96 rounded-bl-large md:block opacity-70"></div>
+        <div className="hidden w-full transition-all transform rounded-r-none rounded-tl-none bg-blue-100/70 h-[400px] rounded-bl-large md:block"></div>
       </div>
       <InnerLayout className="relative">
         <section className="z-10 grid md:grid-cols-2">
