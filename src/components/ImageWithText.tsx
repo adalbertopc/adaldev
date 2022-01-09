@@ -11,6 +11,7 @@ interface ImageWithTextProps {
   background?: string;
   buttonText?: string;
   buttonHref?: string;
+  buttonIsNextLink?: boolean;
 }
 
 export const ImageWithText = ({
@@ -23,6 +24,7 @@ export const ImageWithText = ({
   background,
   buttonText,
   buttonHref,
+  buttonIsNextLink,
 }: ImageWithTextProps) => {
   return (
     <div className={`${background}`}>
@@ -36,7 +38,9 @@ export const ImageWithText = ({
             )}
             {children && <div className="mb-6 text-lg">{children}</div>}
             {buttonText && (
-              <Button href={buttonHref || '#'}>{buttonText}</Button>
+              <Button href={buttonHref || '#'} isNextLink={buttonIsNextLink}>
+                {buttonText}
+              </Button>
             )}
           </div>
           <div
